@@ -1,0 +1,587 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #1E2A38;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+header nav {
+    height: 60px;
+    width: 100%;
+    background-color: #313E4D;
+    color: #00ADB5;
+    padding: 1rem;
+    position: fixed;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    background: #00ADB5;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Navbar Links */
+nav ul li a {
+    text-decoration: none;
+    color: #00ADB5;
+    font-size: 1.5rem;
+    padding: 8px 12px;
+    transition: 0.3s ease;
+    font-family: "Roboto Mono", serif;
+}
+
+nav ul li a:hover {
+    color: #EEEEEE;
+}
+
+.Navbar_NameImg {
+    height: 40px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+hr {
+    border: 2px solid grey;
+}
+#Navbar_NameImg{
+    display: none;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    #Navbar_NameImg{
+        display: block;
+        margin: 0px;
+    }
+    .menu-icon {
+        display: flex;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+        display: none; 
+        background-color: transparent;
+        backdrop-filter: blur(20px);
+    }
+
+    nav ul.active {
+        display: flex; 
+    }
+
+    nav ul li {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        font-size: 14px;
+    }
+    #Navbar_NameImg1{
+        display: none;
+    }
+    .Navbar_NameImg{
+        height: 20px;
+        width: auto;
+    }
+}
+
+/* HomePage Section Style Code Here!! */
+#HomePage {
+    height: auto; 
+    width: 100%;
+    color: white;
+    padding: 2rem 1rem; 
+}
+
+#HomePageUpperDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    flex-wrap: wrap;
+}
+
+#HomepPageContentDiv {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    padding: 1rem;
+    max-width: 600px; 
+}
+
+#HomePageContentDivHeader,
+#HomePageContentdivPositionText {
+    font-family: "Poppins", serif;
+    font-size: 3rem;
+    letter-spacing: 1px;
+    line-height: 1.2; 
+}
+
+#HomepPageContentDiv p {
+    font-size: 1.2rem;
+    font-family: "Roboto Mono", serif;
+    max-width: 580px;
+    margin-left: 1rem;
+    padding: 5px;
+    line-height: 1.6;
+}
+
+#HomePageImgDiv {
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-right: 1rem;
+    text-align: center; 
+}
+
+#HomePageImgDiv img {
+    height: 200px; 
+    width: 200px;
+    border-radius: 50%;
+    object-fit: cover; 
+}
+
+#HomePageContentDivUl {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+#HomePageContentDivUl a {
+    text-decoration: none;
+}
+
+#HomePageContentDivUl li {
+    height: 40px;
+    width: 120px;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 8px 12px;
+    font-size: 1rem; 
+    font-family: "Roboto Mono", serif;
+    font-weight: 400;
+    margin: 0.5rem;
+    list-style: none;
+    display: inline-block;
+    border: 1px solid transparent;
+    text-align: center;
+}
+
+#together,#together a {
+    background-color: #007BFF;
+    color: white;
+}
+
+#together:hover,
+#together a:hover {
+    background-color: white;
+    color: blue;
+    transition: ease-in-out 0.5s;
+}
+
+#Resumebtn,
+#Resumebtn a {
+    background-color: white;
+    color: #004085;
+}
+
+#Resumebtn:hover,
+#Resumebtn a:hover {
+    background-color: #424242;
+    color: white;
+    transition: ease-in-out 0.5s;
+}
+
+#HomePageLowerDiv {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    flex-wrap: wrap; 
+}
+
+#HomePageExperienceDiv {
+    height: auto; 
+    width: 90%; 
+    max-width: 600px; 
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+#ExperienceUL {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 1rem; 
+    list-style: none;
+}
+
+.HomePageExperienceListItem {
+    font-size: 2rem; 
+    padding: 0.5rem;
+    color: #424242;
+    cursor: pointer;
+    transition: ease-in-out 0.4s;
+}
+
+.HomePageExperienceListItem:hover {
+    font-size: 2.5rem; 
+    color: aqua;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    #HomePageUpperDiv {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    #HomepPageContentDiv {
+        margin-left: 0; 
+        text-align: center; 
+    }
+
+    #HomePageContentDivHeader,
+    #HomePageContentdivPositionText {
+        font-size: 2rem; /* Smaller font size */
+    }
+
+    #HomepPageContentDiv p {
+        font-size: 1rem; /* Smaller font size */
+        margin-left: 0; /* Remove left margin */
+        text-align: center; /* Center text */
+    }
+
+    #HomePageImgDiv img {
+        height: 150px; /* Even smaller image size */
+        width: 150px;
+    }
+
+    #HomePageContentDivUl li {
+        font-size: 0.6rem; 
+        height: 100%;
+        width: 100px; 
+    }
+
+    #HomePageExperienceDiv {
+        width: 100%; 
+        max-width: none; 
+    }
+
+    .HomePageExperienceListItem {
+        font-size: 1.8rem; 
+        padding: 0px;
+    }
+}
+#ProjectMainDiv{
+    display: flex;
+    justify-content: space-around; 
+    align-items: center; 
+    padding: 10px;
+}
+.ProjectDivContainer{
+    background-color: lightgrey;
+    border-radius: 10px;
+    padding: 4px 9px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    height: 280px;
+    width: 290px;
+  }
+  .ProjectDivContainer a{
+    text-decoration: none;
+    color:black;
+  }
+  #Project, #Experience, #Education{
+    text-align: center;
+  }
+  #ProjectHeader,#ExperienceHeader, #EducationHeader, #ContactHeader{
+    font-family: "Poppins", serif;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: white;
+    margin-bottom: 0.6rem;
+  }
+  .ProjectImgDiv img{
+    height: 180px;
+    border-radius: 10px;
+    width: 100%;
+    /* background-image:url(./assets/SkillEnhance.jpg); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .ProjectContentDiv h2{
+    margin-top: 0.5rem;
+    margin-bottom: 0.2rem;
+    font-family: "Poppins", serif;
+    font-weight: bold;
+    font-size:28px
+  }
+  .ProjectContentDiv h3{
+    font-size:18px;
+    font-weight: 300;
+  }
+
+  @media screen and (max-width: 768px) {
+    #ProjectMainDiv {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ProjectDivContainer {
+        width: 70%;
+        height: auto;
+        padding: 10px;
+        margin-bottom: 1rem;
+    }
+
+    .ProjectImgDiv img {
+        height: auto;
+        max-height: 200px;
+    }
+
+    .ProjectContentDiv h2 {
+        font-size: 24px;
+    }
+
+    .ProjectContentDiv h3 {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #ProjectHeader, #ExperienceHeader, #EducationHeader, #ContactHeader {
+        font-size: 1.8rem;
+    }
+
+    .ProjectDivContainer, .EducationContentDiv {
+        width: 95%;
+        font-size: 18px;
+    }
+
+    .ProjectImgDiv img, .EducationImgdiv img {
+        max-height: 180px;
+    }
+
+    .ProjectContentDiv h2, .EducationCotentdiv h2 {
+        font-size: 22px;
+    }
+
+    .ProjectContentDiv h3, .EducationCotentdiv h3 {
+        font-size: 14px;
+    }
+    #Experience ul li{
+        font-size: 16px;
+        margin: 0px;
+      }
+}
+  
+#Experience ul li{
+    list-style: none;
+    color: white;
+    font-size: 28px;
+    margin: 1rem;
+  }
+  #Experience .fa-solid{
+    color: #00ADB5;
+  }
+  
+  .EducationOutterDiv {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.EducationContentDiv {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    background-color: #424242;
+    color: white;
+    padding: 10px;
+    margin-bottom: 1.5rem;
+    border-radius: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.EducationImgdiv {
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+
+.EducationImgdiv img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.EducationCotentdiv {
+    flex: 1;
+    text-align: left;
+}
+
+.EducationCotentdiv h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.EducationCotentdiv span, .EducationCotentdiv h3 {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #00ADB5;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .EducationContentDiv {
+        width: 90%;
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .EducationImgdiv {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .EducationCotentdiv h2 {
+        font-size: 20px;
+    }
+
+    .EducationCotentdiv span, .EducationCotentdiv h3 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .EducationContentDiv {
+        width: 95%;
+        padding: 12px;
+    }
+
+    .EducationCotentdiv h2 {
+        font-size: 18px;
+    }
+
+    .EducationCotentdiv span, .EducationCotentdiv h3 {
+        font-size: 12px;
+    }
+}
+
+#Contact{
+    height: 100%;
+    width: 100%;
+    background-color: #313E4D;
+    text-align: center;
+    color:white;
+}
+#Contact p {
+     width:450px;
+     justify-self: center;
+     font-size: 28px;
+     font-family: "Roboto Mono", serif;
+     font-weight: 600;
+     margin: 2rem;
+}
+#Contact h3{
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+#Contact i{
+    font-size: 18px;
+    font-weight: 600;
+}
+#Contact h6{
+    margin-bottom: 5px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+#Contact h6 b{
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+@media (max-width: 768px) {
+    #Contact p {
+        font-size: 20px;
+        width: 90%;
+    }
+
+    #Contact h3 {
+        font-size: 18px;
+    }
+
+    #Contact h6 {
+        font-size: 14px;
+    }
+
+    #Contact h6 b {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    #Contact p {
+        font-size: 18px;
+        width: 95%;
+    }
+
+    #Contact h3 {
+        font-size: 16px;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #Contact h6 {
+        font-size: 12px;
+    }
+
+    #Contact h6 b {
+        font-size: 14px;
+    }
+}
